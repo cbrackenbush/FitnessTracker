@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.fitnesstracker.controllers.ProgressController"
+      alignment="CENTER" spacing="20">
+    <Label fx:id="progressMessageLabel" text="Progress Summary" />
+
+    <TableView fx:id="activitiesTableView" visible="false" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="activityTypeColumn" text="Activity Type" />
+            <TableColumn fx:id="durationColumn" text="Duration" />
+            <TableColumn fx:id="distanceColumn" text="Distance" />
+            <TableColumn fx:id="caloriesColumn" text="Calories Burned" />
+        </columns>
+    </TableView>
+
+
+    <Button fx:id="returnToMainButton" text="Return to Main Page" onAction="#returnToMainPage" />
+</VBox>

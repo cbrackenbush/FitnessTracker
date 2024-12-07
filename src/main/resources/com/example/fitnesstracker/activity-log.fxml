@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fitnesstracker.controllers.ActivityLogController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <VBox alignment="CENTER" spacing="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="50.0" AnchorPane.bottomAnchor="0.0">
+            <padding>
+                <Insets top="20.0" left="20.0" right="20.0" bottom="20.0" />
+            </padding>
+
+            <Label text="Log Your Activity" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+            <TextField fx:id="typeField" promptText="Activity Type (e.g., Running)" />
+            <TextField fx:id="durationField" promptText="Duration (hours)" />
+            <TextField fx:id="distanceField" promptText="Distance (km)" />
+            <TextField fx:id="caloriesField" promptText="Calories Burned" />
+
+            <Button text="Submit" onAction="#logActivity" />
+            <Button text="Return to Main Page" onAction="#returnToMainPage" />
+        </VBox>
+    </children>
+</AnchorPane>
